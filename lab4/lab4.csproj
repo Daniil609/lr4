@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
+    <ProjectGuid>{ABB61472-F885-42AD-8ED5-6BE9433C8320}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>lab4</RootNamespace>
+    <AssemblyName>lab4</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|anycpu' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="configManager\EmptyClass.cs" />
+    <Compile Include="configManager\Parser.cs" />
+    <Compile Include="configManager\appsettings.cs" />
+    <Compile Include="dataAccess\DAConfig.cs" />
+    <Compile Include="dataAccess\Interface.cs" />
+    <Compile Include="dataAccess\reprozit.cs" />
+    <Compile Include="servise Layer\SAL interfaces.cs" />
+    <Compile Include="servise Layer\servicelasses.cs" />
+    <Compile Include="Modelss\FindCreteria.cs" />
+    <Compile Include="Modelss\models.cs" />
+    <Compile Include="Modelss\sertch.cs" />
+    <Compile Include="FileManager\Installer1.cs" />
+    <Compile Include="FileManager\instal.cs" />
+    <Compile Include="FileManager\library.cs" />
+    <Compile Include="FileManager\program.cs" />
+    <Compile Include="FileManager\servise.cs" />
+    <Compile Include="errorlogger\errorlogger.cs" />
+    <Compile Include="errorlogger\ILogger.cs" />
+    <Compile Include="dataManager\dataManager.cs" />
+    <Compile Include="dataManager\Installer.designer.cs" />
+    <Compile Include="dataManager\installer.cs" />
+    <Compile Include="dataManager\program.cs" />
+    <Compile Include="dataManager\servise.desogner.cs" />
+    <Compile Include="dataManager\servise.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="configManager\ppesings.json" />
+    <None Include="configManager\config.xml" />
+    <None Include="FileManager\servise.designer" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
